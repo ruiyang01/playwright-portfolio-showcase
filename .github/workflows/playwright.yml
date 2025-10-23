@@ -28,3 +28,9 @@ jobs:
         name: playwright-report-${{ matrix.browser }}
         path: playwright-report/
         retention-days: 30
+    - name: Upload traces
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: traces-${{ matrix.browser }}
+          path: test-results/**/*.zip    
