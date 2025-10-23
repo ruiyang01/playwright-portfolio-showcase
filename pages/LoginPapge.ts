@@ -9,8 +9,8 @@ export class LoginPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.username = page.getByPlaceholder('');
-        this.password = page.getByPlaceholder('');
+        this.username = page.getByPlaceholder('Username');
+        this.password = page.getByPlaceholder('Password');
         this.submit = page.getByRole('button', {name: 'Login'});
         this.error = page.locator('[data-test="error"]');
     }

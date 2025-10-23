@@ -23,7 +23,7 @@ export class TodoPage {
     }
 
     async deleteFirst() {
-        await this.page.locator('.destory').first().click({force: true});
+        await this.page.locator('.destroy').first().click({force: true});
     }
 
     async expectCount(n: number) {
